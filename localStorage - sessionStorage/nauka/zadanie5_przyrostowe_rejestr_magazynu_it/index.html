@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT-Partner Serwis — Ewidencja Magazynowa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>IT-Partner Serwis — Ewidencja Magazynowa Części</h1>
+    <p>Zintegrowany moduł ewidencji podzespołów z trwałością w Web Storage</p>
+  </header>
+
+  <main>
+    <section class="karta-sekcji">
+      <h2>Zarejestruj nowy podzespół</h2>
+      <form id="formularz-czesci">
+        <div class="siatka-formularza">
+          <div class="grupa-pola">
+            <label for="nazwa-czesci">Nazwa podzespołu lub modelu części:</label>
+            <input type="text" id="nazwa-czesci" required placeholder="np. Dysk SSD 1TB NVMe Gen4">
+          </div>
+
+          <div class="grupa-pola">
+            <label for="kategoria-czesci">Kategoria komponentu komputerowego:</label>
+            <select id="kategoria-czesci">
+              <option value="Dyski i pamięci masowe">Dyski i pamięci masowe</option>
+              <option value="Pamięci RAM DDR4/DDR5">Pamięci RAM DDR4/DDR5</option>
+              <option value="Karty graficzne">Karty graficzne</option>
+              <option value="Zasilacze i obudowy">Zasilacze i obudowy</option>
+            </select>
+          </div>
+
+          <div class="grupa-pola">
+            <label for="ilosc-czesci">Liczba sztuk na stanie magazynowym:</label>
+            <input type="number" id="ilosc-czesci" min="1" value="5" required>
+          </div>
+
+          <div class="grupa-pola">
+            <label for="cena-czesci">Cena jednostkowa netto (w PLN):</label>
+            <input type="number" id="cena-czesci" min="1" step="0.5" value="280" required>
+          </div>
+        </div>
+
+        <button type="submit" id="btn-dodaj" class="btn-akcja">Zarejestruj podzespół w magazynie</button>
+      </form>
+    </section>
+
+    <section class="karta-sekcji">
+      <div class="naglowek-listy">
+        <h2>Stan bieżący magazynu podzespołów</h2>
+        <span id="licznik-magazynu" class="etykieta-licznika">Pozycji: 0 | Łączna wartość: 0.00 PLN</span>
+      </div>
+
+      <div class="grupa-pola filtr-box">
+        <label for="pole-szukaj">Filtruj podzespoły według nazwy:</label>
+        <input type="text" id="pole-szukaj" placeholder="Wpisz szukany model...">
+      </div>
+
+      <div class="tabela-kontener">
+        <table id="tabela-czesci">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nazwa części</th>
+              <th>Kategoria</th>
+              <th>Ilość</th>
+              <th>Cena (PLN)</th>
+              <th>Wartość</th>
+              <th>Akcje</th>
+            </tr>
+          </thead>
+          <tbody id="cialo-tabeli">
+            <!-- Wiersze generowane dynamicznie przez JavaScript -->
+          </tbody>
+        </table>
+        <p id="komunikat-pusty" class="komunikat-pusty ukryty">Brak podzespołów w magazynie. Dodaj pierwszy element powyżej.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portal Usługowo-Handlowy IT-Partner. Moduł Magazynowy.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

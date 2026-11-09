@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f3ef;
+  color: #3e2723;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #4e342e;
+  color: #ffffff;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #d7ccc8;
+  font-size: 0.9rem;
+}
+
+main {
+  flex: 1;
+  max-width: 650px;
+  width: 100%;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.panel-konfiguracji {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+  border: 1px solid #d7ccc8;
+  margin-bottom: 24px;
+}
+
+.grupa-pola {
+  margin-bottom: 18px;
+}
+
+.pole-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pole-checkbox label {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #4e342e;
+  font-size: 0.92rem;
+}
+
+select,
+input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bcaaa4;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.przyciski {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #6d4c41;
+  color: #ffffff;
+  border: none;
+  padding: 11px 18px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #5d4037;
+}
+
+.btn-szary {
+  background-color: #8d6e63;
+}
+
+.btn-szary:hover {
+  background-color: #795548;
+}
+
+.status-box {
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: #2e7d32;
+  min-height: 20px;
+  font-weight: 500;
+}
+
+/* Sekcja podglądu */
+.podglad-box {
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.podglad-box h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.cena-podgladu {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Motywy wizualne */
+.motyw-cieply {
+  background-color: #efebe9;
+  color: #3e2723;
+  border: 2px solid #8d6e63;
+}
+
+.motyw-jasny {
+  background-color: #ffffff;
+  color: #212121;
+  border: 2px solid #e0e0e0;
+}
+
+.motyw-ciemny {
+  background-color: #212121;
+  color: #f5f5f5;
+  border: 2px solid #424242;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: #d7ccc8;
+  color: #4e342e;
+  font-size: 0.85rem;
+}

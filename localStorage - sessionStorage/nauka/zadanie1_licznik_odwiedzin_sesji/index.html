@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recepcja Hotelu Grand Panorama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Recepcja Hotelu Grand Panorama — Panel Dyżuru</h1>
+    <p>Monitorowanie aktywności personelu w bieżącej sesji roboczej</p>
+  </header>
+
+  <main>
+    <section class="karta-panelu">
+      <h2>Bieżąca liczba odsłon i akcji w sesji:</h2>
+      <div class="licznik-box">
+        <span id="licznik-odwiedzin">0</span>
+      </div>
+
+      <div class="przyciski-akcji">
+        <button type="button" id="btn-zwieksz">Zarejestruj operację w sesji</button>
+        <button type="button" id="btn-reset" class="btn-ostrzezenie">Wyczyść licznik sesyjny</button>
+      </div>
+
+      <p id="komunikat-stanu" class="komunikat" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Hotel Grand Panorama. System Obsługi Gości.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

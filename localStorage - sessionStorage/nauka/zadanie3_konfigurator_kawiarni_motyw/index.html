@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aroma Cafe — Personalizacja Panelu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Aroma Cafe — Personalizacja Panelu Baristy</h1>
+    <p>Konfigurator wyglądu i ustawień stanowiska zamówień</p>
+  </header>
+
+  <main>
+    <section class="panel-konfiguracji">
+      <form id="formularz-preferencji">
+        <div class="grupa-pola">
+          <label for="wybor-motywu">Wybierz paletę kolorystyczną kawiarni:</label>
+          <select id="wybor-motywu">
+            <option value="cieply">Ciepły cynamon (Domyślny)</option>
+            <option value="jasny">Jasny poranek</option>
+            <option value="ciemny">Ciemne espresso</option>
+          </select>
+        </div>
+
+        <div class="grupa-pola pole-checkbox">
+          <input type="checkbox" id="opcja-powiadomienia">
+          <label for="opcja-powiadomienia">Włącz dźwiękowe powiadomienia o nowych zamówieniach</label>
+        </div>
+
+        <div class="grupa-pola">
+          <label for="suwak-rozmiar">Wielkość czcionki menu (w pikselach): <span id="wartosc-suwaka">16px</span></label>
+          <input type="range" id="suwak-rozmiar" min="12" max="22" value="16">
+        </div>
+
+        <div class="przyciski">
+          <button type="button" id="btn-zapisz-konfiguracje">Zapisz preferencje w pamięci</button>
+          <button type="button" id="btn-przywroc-domyslne" class="btn-szary">Przywróć konfigurację fabryczną</button>
+        </div>
+
+        <p id="status-konfiguracji" class="status-box" role="status"></p>
+      </form>
+    </section>
+
+    <section id="podglad-karty" class="podglad-box motyw-cieply">
+      <h3>Podgląd Karty Zamówienia</h3>
+      <p>Kawa rzemieślnicza: Flat White na podwójnym espresso z nutą kardamonu.</p>
+      <p class="cena-podgladu">Cena: 18,50 PLN</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aroma Cafe. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

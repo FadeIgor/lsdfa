@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przystań Kajakowa Fala</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Przystań Kajakowa Fala — System Rezerwacji Sprzętu</h1>
+    <p id="licznik-sesji">Bieżąca sesja przeglądania przystani aktywna.</p>
+  </header>
+
+  <main>
+    <section class="karta-glowna">
+      <form id="formularz-rezerwacji">
+        <div class="grupa-pola">
+          <label for="imie-klienta">Imię i nazwisko osoby wypożyczającej:</label>
+          <input type="text" id="imie-klienta" required placeholder="np. Adam Kowalski">
+        </div>
+
+        <div class="grupa-pola">
+          <label for="typ-kajaka">Wybierz rodzaj kajaka wodnego:</label>
+          <select id="typ-kajaka">
+            <option value="jednoosobowy">Jednoosobowy sportowy (25 zł/h)</option>
+            <option value="dwuosobowy">Dwuosobowy turystyczny (40 zł/h)</option>
+            <option value="rodzinny">Rodzinny 3-osobowy (55 zł/h)</option>
+          </select>
+        </div>
+
+        <div class="grupa-pola">
+          <label for="liczba-godzin">Planowany czas wypożyczenia (w godzinach):</label>
+          <input type="number" id="liczba-godzin" min="1" max="8" value="2" required>
+        </div>
+
+        <div class="grupa-pola pole-checkbox">
+          <input type="checkbox" id="opcja-kamizelka">
+          <label for="opcja-kamizelka">Dodatkowa kamizelka asekuracyjna dla dziecka (+10 zł)</label>
+        </div>
+
+        <div class="przyciski-akcji">
+          <button type="submit" id="btn-zatwierdz" class="btn-glowny">Zatwierdź rezerwację i opłać na przystani</button>
+          <button type="button" id="btn-anuluj-szkic" class="btn-drugorzedny">Anuluj szkic rezerwacji</button>
+        </div>
+      </form>
+
+      <div id="podsumowanie-rezerwacji" class="podsumowanie-box" role="status">
+        Wypełnij formularz. Twój szkic jest na bieżąco zapamiętywany.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Przystań Kajakowa Fala. Aktywny wypoczynek nad wodą.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

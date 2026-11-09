@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Naprawa MotoMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Auto-Naprawa MotoMaster — Przyjęcie Pojazdu do Serwisu</h1>
+    <p>System rejestracji usterek i zleceń naprawy warsztatowej</p>
+  </header>
+
+  <main>
+    <section class="formularz-karta">
+      <form id="formularz-zlecenia">
+        <div class="grupa-pola">
+          <label for="nr-zlecenia">Numer rejestracyjny pojazdu lub zlecenia:</label>
+          <input type="text" id="nr-zlecenia" placeholder="np. KR 12345 lub ZL-2026/04">
+        </div>
+
+        <div class="grupa-pola">
+          <label for="opis-usterki">Szczegółowy opis zgłaszanej usterki mechanicznej:</label>
+          <textarea id="opis-usterki" rows="5" placeholder="Wpisz objawy usterki, np. stuki w zawieszeniu przy skręcie..."></textarea>
+        </div>
+
+        <div class="akcje">
+          <button type="button" id="btn-wyczysc-szkic" class="btn-anuluj">Wyczyść zapisany szkic zlecenia</button>
+        </div>
+
+        <p id="status-zapisu" class="komunikat-statusu" role="status">Wprowadź dane usterki. Zmiany są automatycznie zapamiętywane.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Auto-Naprawa MotoMaster. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
